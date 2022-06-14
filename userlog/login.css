@@ -1,0 +1,116 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+::selection{
+    color: mediumpurple;
+    background-color: #323232;
+}
+
+body{
+    margin: 0;
+    background-image: url("../assets/background.jpg");
+    background-color: #282828;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.loginwrap{
+    padding: 20px 0 25px;
+    margin: 170px auto 210px;
+    width: 450px;
+    border-radius: 20px;
+    background-color: rgba(147, 112, 219, 0.09);
+    color: lightgrey;
+    box-shadow: 0 0 10px black;
+}
+
+.loginwrap h1{
+    text-align: center;
+    font-size: 50px;
+    color: mediumpurple;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.loginwrap form{
+    margin: 20px auto;
+    width: 320px;
+    color: mediumpurple;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 2px;
+}
+
+.loginwrap form input{
+    padding: 10px;
+    font-size: inherit;
+}
+
+.loginwrap form input[type="text"], input[type="password"], input[type="email"]{
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    color: rebeccapurple;
+    border: 2px solid rebeccapurple;
+    background: white;
+}
+
+.loginwrap form input[type="submit"]{
+    width: 320px;
+    height: 45px;
+    border: none;
+    background: rebeccapurple;
+    color: white;
+    cursor: pointer;
+}
+
+.loginwrap form input[type="submit"]:hover{
+    background: mediumpurple;
+    transition: 0.2s ease-in;
+}
+
+.loginwrap form input[type="submit"]:focus{
+    width: 320px;
+    height: 45px;
+    border: 2px solid mediumpurple;
+    background: white;
+    color: mediumpurple;
+}
+
+.loginwrap form input:focus{
+    background: mediumpurple;
+    color: white;
+    outline: none;
+}
+
+.loginwrap p{
+    text-align: center;
+    color: lightgrey;
+}
+
+.loginwrap a{
+    text-decoration: none;
+    color: rebeccapurple;
+    transition: 0.2s ease-in;
+}
+
+.loginwrap a:hover{
+    color: mediumpurple;
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+
+    html, body {width: auto!important; overflow-x: hidden!important}
+
+    .loginwrap{
+        width: 90%;
+        margin-top: 250px;
+        margin-bottom: 50px;
+    }
+
+
+
+}
+

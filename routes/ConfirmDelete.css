@@ -1,0 +1,143 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+::selection{
+    color: mediumpurple;
+    background-color: #323232;
+}
+
+body{
+    margin: 0;
+    background-image: url("../assets/background.jpg");
+    background-color: #282828;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main{
+    margin: 150px 0 80px;
+    z-index: 1;
+}
+
+.top {
+    width: 1100px;
+    margin: 10px auto 50px;
+    padding: 0;
+    border-radius: 20px;
+    background-color: rgba(147, 112, 219, 0.2);
+    color: lightgrey;
+    box-shadow: 0 0 10px black;
+    animation: fade2 4s forwards;
+    display: flex;
+    justify-content: space-between;
+}
+
+.worldmapleft{
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.worldmapright{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+h1{
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    color: lightgrey;
+}
+
+form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticketcontent{
+    margin-top: 20px;
+}
+
+form div{
+    text-align: center;
+}
+
+form div h3{
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+form input[type="submit"]{
+    width: 320px;
+    height: 45px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    border: none;
+    background: rebeccapurple;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+form input[type="submit"]:hover{
+    background: mediumpurple;
+    transition: 0.2s ease-in;
+}
+
+form input[type="submit"]:focus{
+    width: 320px;
+    height: 45px;
+    border: 2px solid mediumpurple;
+    background: white;
+    color: mediumpurple;
+}
+
+/* Animations */
+@keyframes fade2{
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+
+    html, body {width: auto!important; overflow-x: hidden!important}
+
+    .top{
+        width: 90%;
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .worldmapleft{
+        display: none;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+
+    .worldmapright{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+
+    form{
+        width: 100%;
+    }
+
+    .ticketcontent form h3{
+        font-size: 20px;
+    }
+
+}

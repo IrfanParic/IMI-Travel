@@ -1,0 +1,182 @@
+.wrap{
+    background-color: rgba(0, 0, 0, 0.85);
+    border-bottom: 3px solid #9370db;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+header{
+    padding: 20px 0;
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div{
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slika{
+    width: 100px;
+    position: absolute;
+    top: 45%;
+    z-index: 1;
+}
+
+.planeta{
+    width: 100px;
+    animation: rotation 20s infinite linear;
+}
+
+
+.slikalogin, .slikahome{
+    width: 40px;
+    filter: invert(58%) sepia(14%) saturate(6601%) hue-rotate(220deg) brightness(88%) contrast(96%);
+}
+
+.slikalogin:hover, .slikahome:hover{
+    filter: invert(99%) sepia(15%) saturate(742%) hue-rotate(281deg) brightness(124%) contrast(100%);
+}
+
+header h1{
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 7px;
+    visibility: hidden;
+    transition: 0.8s;
+    align-items: center;
+    text-align: center;
+    top: 2.5px;
+}
+
+.list{
+    position: absolute;
+    transition: 0.4s;
+    opacity: 0;
+    display: flex;
+    right: 140%;
+    top: 22%;
+}
+
+.list a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    margin-left: 20px;
+    display: none;
+    transition: 0.2s ease-in;
+    width:80px;
+    text-align: center;
+}
+
+.list a:hover{
+    color: mediumpurple;
+}
+
+.change .list{
+    transform: translateX(-10px);
+    opacity: 100;
+}
+
+.change .list a{
+    display: unset;
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #9370db;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: white;
+}
+
+.change .bar2 {
+    opacity: 0;
+    background-color: white;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: white;
+}
+
+/* Animations */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 450px) {
+
+    .wrap{
+        width: 100%;
+    }
+
+    header{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container{
+        display: none;
+    }
+
+    header > div{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .slika{
+        width: 100px;
+        align-items: center;
+        top: 25%
+    }
+
+    .slicice{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    header h1{
+        left: 0;
+        top: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    
+}
